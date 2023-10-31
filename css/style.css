@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-Thin.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-ExtraLight.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-SemiBold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "KantumruyPro";
+  src: url('../fonts/KantumruyPro-Bold.ttf');
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: "KantumruyPro";
+}
+
+.bgGreen {
+  background: #9ec779 !important;
+}
+
+.mobileDodle{
+  background: #040404;
+    position: fixed;
+    width: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    bottom: 0;
+    color: #fff;
+    padding: 10px;
+    display: none;
+    justify-content: space-around;
+    border-radius: 50px;
+    font-size: 20px;
+    align-items: center;
+}
+.mobileDodle a,.mobileDodle a:hover,.mobileDodle a:active{
+  color: #fff;
+}
+.bgBlue {
+  background: #488fe1 !important;
+}
+
+.docArea {
+  background-color: #e5e5e5;
+  margin: 20px 0;
+  position: relative;
+}
+
+.docArea #leftBorder1,
+.docArea #leftBorder2 {
+  display: inline-block;
+  width: 10px;
+  height: 50%;
+  position: absolute;
+}
+
+.docArea #leftBorder1 {
+  background: #488fe1;
+}
+
+.docArea #leftBorder2 {
+  background: #9ec779;
+  bottom: 0;
+}
+
+#profileImgArea {
+  width: 220px;
+  height: 220px;
+  /* padding: 0 20px; */
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid #9ec779;
+}
+
+#profileImg {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+#profileName {
+  font-size: 3ch;
+  margin: 0;
+  font-weight: 600;
+  color: #488fe1;
+  line-height: normal;
+}
+
+#profileDesignation {
+  font-weight: 500;
+  font-size: 1.5ch;
+}
+
+#profileContact {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.iconGreen {
+  color: #9ec779;
+}
+
+#profileContact p {
+  margin: 0;
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.card_title {
+  width: 230px;
+  background: #488fe1;
+  color: #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-weight: 500;
+}
+
+.card_content {
+  background: #fff;
+  padding: 15px 10px;
+  border-radius: 0 10px 10px;
+}
+
+.career {
+  padding: 0 15px;
+  font-style: italic;
+  margin: 0;
+}
+
+.lineDot {
+  position: relative;
+  border-left: 1px solid #ccc;
+  border-left-style: dashed;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.lineDot p {
+  margin: 0;
+}
+
+.lineDot .circleLine {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #9ec779;
+  border-radius: 50%;
+  top: 0;
+  left: -10px;
+  border: 3px solid #fff;
+}
+
+.projectDetails {
+  display: flex;
+}
+
+.circleBadge {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 10px;
+  line-height: 3px;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pDetails>p {
+  margin-bottom: 4px;
+}
+
+.seperator {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #efefef;
+  border-bottom-style: dashed;
+  margin: 10px 0;
+}
+
+#printButton,
+#dwdButton {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+a, a:hover, a:active{
+  text-decoration: none;
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  #profileContact {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  #profileContact p {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width:475px) {
+  .pDetails ul{
+    padding-left: 0px;
+  }
+  .mobileDodle{
+    display: flex;
+  }
+}
+@media print {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 12px;
+    background-color: #fff;
+  }
+
+  #profileContact {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  #profileContact p {
+    margin-bottom: 10px;
+  }
+
+  .ProjectDetailsBreak {
+    page-break-after: auto
+  }
+
+  #printButton,
+  #dwdButton {
+    display: none;
+  }
+}
